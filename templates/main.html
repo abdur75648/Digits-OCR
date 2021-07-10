@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="image" property="og:image" content="{{ url_for('static',filename='preview.jpg') }}">
+  <title>OCR Model</title>
+  <link rel="stylesheet"  href= "{{ url_for('static',filename='styles.css') }}">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700,300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu&display=swap">
+</head>
+
+<body>
+  <div class="frame">
+    <h1><b>Digits OCR</b></h1>
+    <h3><em>A CNN Model trained on MNIST dataset to recognize handwritten digits.</em></h3>
+    <div class="center">
+      <div class="title">
+        <h2>Upload an image to predict</h2>
+        <h2 class="sub-h2"><i>Few test images are <a href="https://drive.google.com/drive/folders/1EM2xiyGUzZOSFrJ0YJ1PdH60ipIklkVV?usp=sharing">here</a></i></h2>
+      </div>
+      <form action="{{ url_for('main') }}" method="post" enctype="multipart/form-data">
+        <div class="dropzone">
+          <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+          <input type="file" class="upload-input"  id="myfile" name="myfile">
+        </div>
+        <button type="submit" class="btn" name="uploadbutton">Submit File</button>
+      </form>
+    </div>
+    <h5>©2021: Made by Abdur Rahman</h5>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+Flask
+gunicorn
+imagesize
+itsdangerous
+matplotlib
+numpy
+pytz
+pillow
+requests

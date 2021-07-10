@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCR Model</title>
+  <link rel="stylesheet"  href= "{{ url_for('static',filename='styles.css') }}">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700,300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu&display=swap">
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</head>
+
+<body>
+  <div class="frame">
+    <h1><b>Digits OCR</b></h1>
+    <h3><em>A simple Neural Network using MNIST dataset to recognize handwritten digits.</em></h3>
+    <div class="center">
+      <div class="title">
+        <h2>Prediction Successful!</h2>
+      </div>
+        <div class="dropzone_result">
+            <h2 style="margin-bottom: 0px;"> The Predicted Digit Is:</h2>
+            <h2 style="margin-top: 0px;margin-bottom: 0px;font-size: 20px;"> {{ prediction }}</h2>
+            <h2 style="margin-top: 0px;margin-bottom: 0px;font-size: 13px;"> Confidence Score: {{confidence_score}}</h2>
+        </div>
+        <!-- <button  class="btn" onClick="window.location.reload()">Submit Again</button> -->
+        <button  class="btn_result" onclick="goBack()">Submit Again</button>
+        <!-- <button type="submit" class="btn" name="uploadbutton">Submit File</button> -->
+    </div>
+    <h5>©2021: Made by Abdur Rahman</h5>
+  </div>
+  <!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
+
+  <!-- NO JS ADDED YET -->
+
+</body>
+
+</html>
+</html>
